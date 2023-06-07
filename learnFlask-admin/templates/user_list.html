@@ -21,7 +21,13 @@
         </tr>
     </thead>
     <tbody>
-
+        {% for ele in v2%}
+        <tr>
+            <td>{{ele[0]}}</td>
+            <td>{{ele[2]}}</td>
+            <td>{{ele[3]}}</td>
+        </tr>
+        {% endfor %}
     </tbody>
 </table>
 </body>

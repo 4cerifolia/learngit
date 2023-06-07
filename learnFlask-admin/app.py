@@ -33,7 +33,15 @@ def user_list():
         line = line.strip()
         datalist.append(line)
     file_object.close()
-    return render_template('user_list.html',v1 = datalist)
+
+
+    datalist_list = []
+    file_object = open("db.txt", mode='r', encoding='utf-8')
+    for line in file_object:
+        line = line.strip()
+        datalist_list.append(line.split('|'))
+    file_object.close()
+    return render_template('user_list.html',v1 = datalist, v2 = datalist_list)
 
 @app.route("/login")
 def login():
