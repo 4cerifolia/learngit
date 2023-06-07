@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>register</title>
+    <style>
+        h1{
+        color:red;
+        }
+        span{
+        display:inline-block;
+        width:80px;
+        text-align:right;
+        }
+    </style>
 </head>
 <body>
 <h1>Register</h1>
 <form action="/do/register" method="get">
-    <div>name:<input type="text" placeholder="enter your name" name="user"></div>
-    <div>passwd:<input type="password" placeholder="enter your password" name="pwd"></div>
+    <div><span>name:</span><input type="text" placeholder="enter your name" name="user"></div>
+    <div><span>passwd:</span><input type="password" placeholder="enter your password" name="pwd"></div>
 
-    <div>male/femail:
+    <div><span>male/femail:</span>
         male<input type="radio" name = "sex" value="male">
         female<input type="radio" name = "sex" value="female">
     </div>
 
     <div>
-        your city:
+        <span>your city:</span>
         <select name="city">
             <option value="sh">Shanghai</option>
             <option value="hz">Hangzhou</option>
@@ -28,14 +38,14 @@
         </select>
     </div>
     <div>
-        your hobbit:
+        <span>your hobbit:</span>
         basketball<input type="checkbox" name="hob" value="bb">
         football<input type="checkbox" name="hob" value="fb">
         tabletennis<input type="checkbox" name="hob" value="tt">
         others<input type="checkbox" name="hob" value="ot">
     </div>
     <div>
-        other massage:<textarea name="more"></textarea>
+        <span>other massage:</span><textarea name="more"></textarea>
     </div>
     <div>
         <input type="submit" value="push">
