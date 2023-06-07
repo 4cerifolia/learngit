@@ -29,6 +29,30 @@ h1-h6系列标签-标题标签
 <a href="https://www.baidu.com" target="_blank">超链接a标签</a>
 <a href="#n1">a标签做锚点</a>
 <div id="n1">锚点测试</div>
-<img src=""/>
+---输入input
+<input type="text" />
+<input type="password" />
+<input type="checkbox" />
+<input type="radio" name="hc"/>
+<input type="radio" name="hc"/>
+<input type="file"/>
+---下拉框
+<select multiple>
+    <option>beijing</option>
+    <option>shanghai</option>
+    <option>hangzhou</option>
+</select>
+---多行文本框textarea
+<textarea rows = 5></textarea>
+---form标签获取input等的内容
+<form action="http://www.baidu.com/" method="get">/post方式传递但是看不到，get看的到url
+    form标签包裹需要体积爱奥奥的东西
+    <input type="text" name="v1"/>  v1=input123
+    <input type="password" name="v2"/>v2=password999
+    必须要有submit按钮触发提交表单的动作
+    ，内部用户交互的标签，必须要有name属性用于赋值
+    form表单必须有action提交地址和method提交方式（get）（post）
+    <input type="submit" value="提交">
+</form>
 </body>
 </html>

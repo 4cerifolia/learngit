@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+</head>
+<body>
+<h1>Register</h1>
+<form action="/do/register" method="get">
+    <div>name:<input type="text" placeholder="enter your name" name="user"></div>
+    <div>passwd:<input type="password" placeholder="enter your password" name="pwd"></div>
+
+    <div>male/femail:
+        male<input type="radio" name = "sex" value="1">
+        female<input type="radio" name = "sex" value="0">
+    </div>
+
+    <div>
+        your city:
+        <select name="city">
+            <option value="sh">Shanghai</option>
+            <option value="hz">Hangzhou</option>
+            <option value="bj">Beijing</option>
+            <option value="sz">Shenzhen</option>
+            <option value="hk">Hongkong</option>
+            <option value="tp">Taipei</option>
+            <option value="nb">Ningbo</option>
+        </select>
+    </div>
+    <div>
+        your hobbit:
+        basketball<input type="checkbox" name="hob" value="bb">
+        football<input type="checkbox" name="hob" value="fb">
+        tabletennis<input type="checkbox" name="hob" value="tt">
+        others<input type="checkbox" name="hob" value="ot">
+    </div>
+    <div>
+        other massage:<textarea name="more"></textarea>
+    </div>
+    <div>
+        <input type="submit" value="push">
+    </div>
+</form>
+</body>
+</html>
