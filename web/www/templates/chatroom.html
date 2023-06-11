@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHATROOM</title>
+</head>
+<body>
+    <div style="height: 30px;"><input type="text" placeholder="press your x" id="txt">
+    <input type="button" value="press" id="btn"></div>
+    
+    <div id="content-area" style="width: 500px;background-color: grey;height: 500px;border: 1px solid black;border-radius: 10%;">
+    
+    </div>
+    <script src="jquery-3.7.0.min.js"></script>
+    <script>
+        $("#btn").click(function(){
+            var text1 = $("#txt").val();
+            if(text1.length < 1){
+                alert("reinput");
+                return;
+            }else{
+                var newdiv = $("<div>").text(text1);
+                $("#content-area").append(newdiv);
+            }
+
+        })
+    </script>
+</body>
+</html>
