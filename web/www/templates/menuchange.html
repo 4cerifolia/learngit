@@ -46,7 +46,7 @@
     <div class="item">
         <div class="header">head</div>
         <div class="menu">
-            <a href="">menu1</a>
+            <a id="t1" href="">baidu</a>
             <a href="">menu2</a>
         </div>
     </div>
@@ -57,13 +57,72 @@
             <a href="">menu2</a>
         </div>
     </div>
+    <div>
+        football <input type="checkbox" id="v2" checked>
+        basketball <input type="checkbox" id="v3">
+    </div>
+</div>
+<div class="group">
+    <input type="button" value="check all" id="btnAll">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>check</th>
+                <th>ID</th>
+                <th>name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>4cerifolia</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>2</td>
+                <td>4cerifolia</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>3</td>
+                <td>4cerifolia</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>4</td>
+                <td>4cerifolia</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>5</td>
+                <td>4cerifolia</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 <script src="jquery-3.7.0.min.js"></script>
 <script>
     $(".header").click(function(){
         $(this).next().toggleClass("hide");
     })
-    $("a").text("test")
+    $("a").text("test");
+    $("#t1").attr("href","http://www.bilibili.com");//属性替换；
+    // id选择器就是#info class选择器.header 标签选择器 div 多选择器 h1,.info,#v1 层级选择器 #v1 li
+    // 筛选器 $("#xx").parent().parent()  .children() .next() .prev() .siblings() .find("li/#xx/.hh")
+//增加样式 .addClass("样式名称") 样式名称即在CSS中定义的样式名称！！！
+//移除样式 .removeClass
+//有没有样式 .hasClass
+//一次有一次没有样式 .toggleClass
+//prop属性，针对input type=checkbox等标签的属性
+    $("v2").prop("checked");
+    $("v2").prop("checked", false);
+    $("v2").prop("checked", true);
+    $("#btnAll").click(function(){
+        $("table input[type='checkbox']").prop('checked', true);}
+        
+    )
+
 </script>
 </body>
 </html>
