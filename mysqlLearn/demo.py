@@ -1,11 +1,13 @@
 import pymysql
+from pymysql.cursors import DictCursor
 
 conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='x910823y', charset='utf8',db='day6271')
 
 cursor = conn.cursor()#create 游标
+#cursor = conn.cursor() 查询获取元组格式
+#cursor = conn.cursor(cursor=DictCursor) 查询获取字典格式
 
-
-# create table
+# #create table
 # sql = '''
 # create table tb5(
 # id int not null auto_increment primary key,
@@ -42,8 +44,14 @@ cursor = conn.cursor()#create 游标
 # 增删改查
 # 1.增
 # insert into tb5(name,email,age) value('x','x',19);
+
+
 # 2.查
 # select * from tb5 where age=9;
+# cursor.execute('select * from tb5')
+# data_lisit = cursor.fetchall()
+# data_lisit = cursor.fetchone()
+
 # 3.删
 # delete from tb5 where age=9;
 # 4.改
